@@ -1,0 +1,115 @@
+/*-----------profile page css------------*/
+html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    
+}
+.proContainer{
+    padding-bottom: 3%;
+}
+.header{
+    overflow: hidden;
+    text-align: center;
+    top: 0;
+    background-color: #F8F8F8;
+    color: gray;
+    font-family: 'Nanum Brush Script', cursive;
+    font-size: 1.2em;
+    box-shadow: 0 0 6px 3px #D3D3D3;
+}
+#title{
+    margin-top: 10px;
+    text-align: center;
+    display: inline-block;
+}
+.in{
+    display: inline-block;
+    margin-left: 40%;
+}
+#insIcon{
+    width: 30px;
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* msie */
+}
+
+#limitNum{
+    border: none;
+    border:solid 1px #ccc;
+    border-radius: 5px;
+    width: 200px;
+    font-family: FontAwesome, 'Nanum Brush Script', cursive;
+    color: gray;
+    text-align: center;
+}
+
+#limitNum::placeholder{
+    text-align: center;
+    opacity: 0.8;
+}
+
+input:focus{
+    outline: none;
+}
+
+.profileCon{
+    margin-top: 5%;
+    text-align: center;
+}
+.profileCon a{
+    text-decoration: none;
+    color: gray;
+}
+.context{
+    padding: 5% 10% 2% 10%;
+    text-align: center;
+}
+
+.context a{
+    text-decoration: none;
+    color: gray;
+}
+
+.card-img-top{
+    padding: 5px;
+}
+@media screen and (max-width:800px){
+    #title{
+        display: block;
+    }
+    
+    .in{
+        display: block;
+        margin-right: 40%;
+        padding-bottom: 5px;
+    }
+    #limitNum{
+        width: 300px;
+        margin-left: -50%;
+    }
+    .header{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:500px){
+    #title{
+        display: block;
+    }
+    
+    .in{
+        display: block;
+        padding-bottom: 5px;
+    }
+    #limitNum{
+       width: 150px;
+    }
+    .header{
+        width: 100%;
+    }
+}
