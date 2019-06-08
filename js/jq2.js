@@ -1,4 +1,5 @@
 var error = false;
+
 $(document).ready(function() {
     
     var lim = 15;
@@ -34,7 +35,7 @@ $(document).ready(function() {
     
     //limit input on change listener
     $("#limitNum").change(function(e){
-        if($("#limitNum").val() > 0 && error==false){
+        if($("#limitNum").val() > 0 && error==false && $("#limitNum").val()<=20){
             lim = $("#limitNum").val();
             //alert(lim);
             //clear current images
@@ -88,7 +89,7 @@ function changeLimit(limit, username){
             
             var postList = insData.posts;
             //add following and posts
-            var fp = '<p>' + postList.length + ' posts   |   ' + insData.followedBy + ' follows   |   ' + insData.following + ' following</p>';
+            var fp = '<p>' + insData.followedBy + ' follows   |   ' + insData.following + ' following</p>';
             $(fp).appendTo($('.profileCon')).css({
                 'font-size':'1.1em',
                 'color':'darkgray',
