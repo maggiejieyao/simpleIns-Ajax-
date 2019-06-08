@@ -16,10 +16,23 @@ $(document).ready(function() {
             $('#t').removeClass("rainbow");
         }
     });
+    
+    var shrinkHeader = 200;
+    //header scoll down effect
+    $(window).scroll(function(){
+        var scroll = getCurrentScroll();
+        if(scroll >= shrinkHeader){
+            $('.header').addClass('shrink');
+        }else{
+            $('.header').removeClass('shrink');
+        }
+    });
+    
     var usernameHtml = '<span id="t">' + username +'</span>';
     $("#title").append($(usernameHtml));
     changeLimit(lim, username);
     
+    //limit input on change listener
     $("#limitNum").change(function(e){
         if($("#limitNum").val() > 0 && error==false){
             lim = $("#limitNum").val();
@@ -34,7 +47,12 @@ $(document).ready(function() {
             }
         }
     }) 
+    
 });
+
+function getCurrentScroll(){
+    return window.pageYOffset || document.documentElement.scrollTop;
+}
 
 //function load ajax
 function changeLimit(limit, username){
@@ -96,7 +114,9 @@ function changeLimit(limit, username){
             }else{
                 photoCon.html("This account is private").css({
                     'font-family': "'Nanum Brush Script', cursive",
-                    'font-size':'1.5em'
+                    'font-size':'1.5em',
+                    'margin-top':'-40px',
+                    'color':'gray'
                 });
             }
 
