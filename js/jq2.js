@@ -3,7 +3,21 @@ $(document).ready(function() {
     
     var lim = 15;
     var username = localStorage.getItem('user');
-    $("#title").append(username);
+    
+    //change icon color when hover
+    $('#insIcon').on({
+        mouseenter: function () {
+            //stuff to do on mouse enter
+            $('#insIcon').attr('src', './img/insIconCol2.png');
+            $('#t').addClass("rainbow");
+        },
+        mouseleave: function () {
+            $('#insIcon').attr('src', './img/insIcon.png');
+            $('#t').removeClass("rainbow");
+        }
+    });
+    var usernameHtml = '<span id="t">' + username +'</span>';
+    $("#title").append($(usernameHtml));
     changeLimit(lim, username);
     
     $("#limitNum").change(function(e){
