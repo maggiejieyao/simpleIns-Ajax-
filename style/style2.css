@@ -8,11 +8,11 @@ html{
 
 body{
     margin: 0;
-    
 }
 .proContainer{
     padding-bottom: 3%;
 }
+
 .header{
     overflow: hidden;
     text-align: center;
@@ -57,10 +57,85 @@ input:focus{
     outline: none;
 }
 
+.loading {
+  margin: auto;
+  width: 100px;
+  margin-top: 15%;
+  zoom: 1;
+}
+.loading:before {
+  content: '';
+  display: block;
+}
+.loading:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.text {
+  float: left;
+  color: darkgray;
+  font-weight: bold;
+  font-family: 'Nanum Brush Script', cursive;
+  font-size: large;
+}
+.blob {
+  border-radius: 50%;
+  background-color: darkgray;
+  display: block;
+  float: left;
+  margin: 5px 2px;
+  position: relative;
+  top: 6px;
+  height: 3px;
+  width: 3px;
+  animation: loading-blob 1.2s infinite;
+  animation-timing-function: ease-in-out;
+  transform: translate3d(0, 0, 0);
+}
+.blob2 {
+  animation-delay: 150ms;
+}
+.blob3 {
+  animation-delay: 300ms;
+}
+@keyframes fly {
+  0% {
+    background-position: 0 0;
+  }
+  33% {
+    background-position: -250 0;
+  }
+  66% {
+    background-position: -450px 0;
+  }
+}
+@keyframes loading-blob {
+  0% {
+    height: 3px;
+    width: 3px;
+  }
+  25% {
+    height: 7px;
+    width: 7px;
+  }
+  50% {
+    height: 5px;
+    width: 5px;
+  }
+  100% {
+    height: 3px;
+    width: 3px;
+  }
+}
+
+
+
 .profileCon{
     margin-top: 5%;
     text-align: center;
 }
+
 .profileCon a{
     text-decoration: none;
     color: gray;
@@ -79,6 +154,24 @@ input:focus{
     padding: 5px;
 }
 @media screen and (max-width:800px){
+    #title{
+        display: block;
+    }
+    
+    .in{
+        display: block;
+        margin-right: 40%;
+        padding-bottom: 5px;
+    }
+    #limitNum{
+        width: 300px;
+        margin-left: -50%;
+    }
+    .header{
+        width: 100%;
+    }
+}
+@media screen (min-width:500px) and (max-width:800px){
     #title{
         display: block;
     }
