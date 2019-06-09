@@ -42,6 +42,7 @@ $(document).ready(function() {
             $(".profileCon").html('');
             $(".context").html('');
             $("#clearBtn").remove();
+            $(window).scrollTop(0);
             changeLimit(lim, username);
             if(e.keyCode == 13){
                 e.preventDefault();
