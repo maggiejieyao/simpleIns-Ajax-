@@ -12,6 +12,7 @@ $('#submitBtn').click(function(e) {
         window.location.href = "profilePage.html"
     //add username limit
     }else if(username.length > 50){
+        $('#username').val('');
         $('#alertMess1').show();
         $('#alertMess2').hide();
     }else if(username.length <= 0){
