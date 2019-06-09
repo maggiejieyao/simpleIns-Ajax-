@@ -13,8 +13,10 @@ $('#submitBtn').click(function(e) {
     //add username limit
     }else if(username.length > 50){
         $('#alertMess1').show();
+        $('#alertMess2').hide();
     }else if(username.length <= 0){
         $('#alertMess2').show();
+        $('#alertMess1').hide();
     }
     //console.log(username);
     e.preventDefault();
